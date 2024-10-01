@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار الفيديو</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .video-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="message">انت زنجي؟<div/>
+    <button onclick="showVideo()">أي</button>
+    <button onclick="noVideo()">لا</button>
+
+    <div class="video-container" id="videoContainer">
+        <video width="600" controls>
+            <source src="VID_20211204_191837_776.mp4" type="video/mp4">
+            المتصفح لا يدعم تشغيل الفيديو.
+        </video>
+    </div>
+
+    <script>
+        function showVideo() {
+            document.getElementById('videoContainer').style.display = 'block';
+        }
+
+        function noVideo() {
+            alert('لعد ادعبل منا مو يمك الصفحة');
+        }
+    </script>
+
+</body>
+</html>
